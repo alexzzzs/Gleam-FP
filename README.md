@@ -6,7 +6,7 @@
 
 Small, composable functional helpers for Gleam.
 
-**✨ Now available on Hex!** - Published v1.0.0
+** Now available on Hex!** - Published v1.0.0
 
 ## Installation
 
@@ -42,12 +42,12 @@ pub fn safe_divide(a: Int, b: Int) -> option.Option(Int) {
 
 ## Features
 
-🚀 **54 functions** across 5 modules for comprehensive functional programming
-🔧 **Pipeline-friendly** - designed to work seamlessly with Gleam's `|>` operator
-📚 **Comprehensive docs** - every function documented with practical examples
-✅ **100% test coverage** - thoroughly tested and reliable
-🎯 **Ergonomic API** - focused on ease of use and developer experience
-🔒 **Type-safe** - leverages Gleam's powerful type system
+ **54 functions** across 5 modules for comprehensive functional programming
+ **Pipeline-friendly** - designed to work seamlessly with Gleam's `|>` operator
+ **Comprehensive docs** - every function documented with practical examples
+ **100% test coverage** - thoroughly tested and reliable
+ **Ergonomic API** - focused on ease of use and developer experience
+ **Type-safe** - leverages Gleam's powerful type system
 
 ## Philosophy
 
