@@ -1,11 +1,11 @@
-name = "gleam_fp"
+name = "fp_utils"
 version = "1.0.0"
 
 description = "Small, composable functional helpers for Gleam."
 licences = ["MIT"]
 repository = { type = "github", user = "alexzzzs", repo = "Gleam-FP" }
 links = [
-  { title = "Documentation", href = "https://hexdocs.pm/gleam_fp/" },
+  { title = "Documentation", href = "https://hexdocs.pm/fp_utils/" },
   { title = "Repository", href = "https://github.com/alexzzzs/Gleam-FP" }
 ]
 #

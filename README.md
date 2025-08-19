@@ -24,13 +24,20 @@ import fp_utils/option
 import fp_utils/result
 import fp_utils/list
 import fp_utils/predicate
+import gleam/list as std_list
 
 // Pipeline-friendly functional programming
 pub fn example() {
-  [1, 2, 3, 4]
+  [1, 2, 3, 4, 5]
   |> list.filter(fn(x) { x > 2 })
-  |> list.map(fn(x) { x * 2 })
-  |> list.any(fn(x) { x > 5 })  // True
+  |> list.any(fn(x) { x > 3 })  // True
+}
+
+// Working with nested structures
+pub fn flatten_example() {
+  [[1, 2], [3, 4], [5]]
+  |> list.flat_map(fn(x) { x })
+  |> list.filter(fn(x) { x % 2 == 0 })  // [2, 4]
 }
 
 // Ergonomic Option handling
@@ -42,7 +49,7 @@ pub fn safe_divide(a: Int, b: Int) -> option.Option(Int) {
 
 ## Features
 
- **54 functions** across 5 modules for comprehensive functional programming
+ **50 functions** across 5 modules for comprehensive functional programming
  **Pipeline-friendly** - designed to work seamlessly with Gleam's `|>` operator
  **Comprehensive docs** - every function documented with practical examples
  **100% test coverage** - thoroughly tested and reliable
@@ -116,6 +123,7 @@ import fp_utils/list
 import fp_utils/func
 import fp_utils/option
 import gleam/option as gleam_option
+import gleam/list as std_list
 
 pub fn example() -> Bool {
   [1, 2, 3, 4]
@@ -171,6 +179,16 @@ Modules are organized under `fp_utils/`, e.g., `fp_utils/result`, `fp_utils/opti
 - `fp_utils/dict` helpers (map, filter, merge, etc.).
 - `fp_utils/validation` for multi-error accumulation.
 - `fp_utils/maybe_async` for async combinators.
+
+## Performance
+
+The fp_utils library is designed to be performant while maintaining a functional programming style. For detailed benchmark results and performance characteristics of individual functions, see [performance documentation](performance.md).
+
+To run the benchmarks yourself:
+
+```bash
+cd bench && gleam run --target erlang --module perf_benchmark
+```
 
 ## Links
 
