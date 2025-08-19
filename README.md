@@ -179,6 +179,7 @@ Modules are organized under `fp_utils/`, e.g., `fp_utils/result`, `fp_utils/opti
 - `fp_utils/dict` helpers (map, filter, merge, etc.).
 - `fp_utils/validation` for multi-error accumulation.
 - `fp_utils/maybe_async` for async combinators.
+- `fp_utils/json` helpers (see [json_helpers.md](json_helpers.md) for design).
 
 ## Performance
 
